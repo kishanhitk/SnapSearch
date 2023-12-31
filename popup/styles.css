@@ -1,0 +1,14 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+}
+
+h1 {
+  color: #3a3a3a;
+}
+
+select {
+  width: 100%;
+  padding: 5px;
+  margin-top: 10px;
+}
