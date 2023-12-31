@@ -1,11 +1,11 @@
 {
     "manifest_version": 3,
-    "name": "Hello Extensions",
-    "description": "Base Level Extension",
+    "name": "SnapSearch - Better Search on Arc",
+    "description": "Search the web distraction-free with SnapSearch",
     "version": "1.0",
     "action": {
         "default_popup": "popup/hello.html",
-        "default_icon": "hello_extensions.png"
+        "default_icon": "icons/icon128.png"
     },
     "content_scripts": [
         {
@@ -26,5 +26,11 @@
     ],
     "background": {
         "service_worker": "scripts/background.js"
+    },
+    "icons": {
+        "16": "icons/icon16.png",
+        "32": "icons/icon32.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
     }
 }
