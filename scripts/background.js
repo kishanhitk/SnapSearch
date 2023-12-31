@@ -44,28 +44,18 @@ function updateContextMenu(searchEngine) {
 function getContextMenuTitle(searchEngine) {
   switch (searchEngine) {
     case "bing":
-      return "Search with Bing in Little Arc";
+      return 'Search "%s" with Bing in Little Arc';
     case "duckduckgo":
-      return "Search with DuckDuckGo in Little Arc";
+      return 'Search "%s" with DuckDuckGo in Little Arc';
     default: // Google
-      return "Search with Google in Little Arc";
+      return 'Search "%s" with Google in Little Arc';
   }
 }
+
 function createContextMenu(searchEngine) {
-  var title;
-  switch (searchEngine) {
-    case "bing":
-      title = "Search with Bing in Little Arc";
-      break;
-    case "duckduckgo":
-      title = "Search with DuckDuckGo in Little Arc";
-      break;
-    default: // Google
-      title = "Search with Google in Little Arc";
-  }
   chrome.contextMenus.create({
     id: "searchLittleArc",
-    title: title,
+    title: getContextMenuTitle(searchEngine),
     contexts: ["selection"],
   });
 }
