@@ -1,4 +1,4 @@
-chrome.runtime.onInstalled.addListener(function () {
+chrome.runtime.onInstalled.addListener(async function () {
   chrome.storage.sync.get("searchEngine", function (data) {
     createContextMenu(data.searchEngine);
   });
