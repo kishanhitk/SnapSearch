@@ -6,23 +6,23 @@ chrome.runtime.onInstalled.addListener(function () {
 
 chrome.contextMenus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "searchLittleArc") {
-    var query = info.selectionText;
+    const query = info.selectionText;
     chrome.storage.sync.get("searchEngine", function (data) {
       createNewWindow(query, data.searchEngine);
     });
   }
 });
 function createNewWindow(query, searchEngine) {
-  var url;
+  let url;
   switch (searchEngine) {
     case "bing":
-      url = "https://www.bing.com/search?q=" + encodeURIComponent(query);
+      url = `https://www.bing.com/search?q=${encodeURIComponent(query)}`;
       break;
     case "duckduckgo":
-      url = "https://duckduckgo.com/?q=" + encodeURIComponent(query);
+      url = `https://duckduckgo.com/?q=${encodeURIComponent(query)}`;
       break;
     default: // Google
-      url = "https://www.google.com/search?q=" + encodeURIComponent(query);
+      url = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
   }
   chrome.windows.create({ url: url });
 }

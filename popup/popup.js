@@ -3,8 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("searchEngine").value =
       data.searchEngine || "google";
   });
-});
 
-document.getElementById("searchEngine").addEventListener("change", function () {
-  chrome.storage.sync.set({ searchEngine: this.value });
+  document
+    .getElementById("searchEngine")
+    .addEventListener("change", function () {
+      chrome.storage.sync.set({ searchEngine: this.value });
+    });
 });
