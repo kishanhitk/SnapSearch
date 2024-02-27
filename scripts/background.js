@@ -21,6 +21,9 @@ function createNewWindow(query, searchEngine) {
     case "duckduckgo":
       url = `https://duckduckgo.com/?q=${encodeURIComponent(query)}`;
       break;
+    case "kagi":
+      url = `https://kagi.com/?q=${encodeURIComponent(query)}`;
+        break;
     default: // Google
       url = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
   }
@@ -47,6 +50,8 @@ function getContextMenuTitle(searchEngine) {
       return 'Search "%s" with Bing in Little Arc';
     case "duckduckgo":
       return 'Search "%s" with DuckDuckGo in Little Arc';
+    case "kagi":
+      return 'Search "%s" with Kagi in Little Arc';
     default: // Google
       return 'Search "%s" with Google in Little Arc';
   }
