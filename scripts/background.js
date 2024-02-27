@@ -22,8 +22,8 @@ function createNewWindow(query, searchEngine) {
       url = `https://duckduckgo.com/?q=${encodeURIComponent(query)}`;
       break;
     case "kagi":
-      url = `https://kagi.com/?q=${encodeURIComponent(query)}`;
-        break;
+      url = `https://kagi.com/search?q=${encodeURIComponent(query)}`;
+      break;
     default: // Google
       url = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
   }
