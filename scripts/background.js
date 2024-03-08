@@ -24,6 +24,9 @@ function createNewWindow(query, searchEngine) {
     case "kagi":
       url = `https://kagi.com/search?q=${encodeURIComponent(query)}`;
       break;
+    case "perplexity":
+      url = `https://perplexity.ai/search?q=${encodeURIComponent(query)}`;
+      break;
     default: // Google
       url = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
   }
@@ -52,6 +55,8 @@ function getContextMenuTitle(searchEngine) {
       return 'Search "%s" with DuckDuckGo in Little Arc';
     case "kagi":
       return 'Search "%s" with Kagi in Little Arc';
+    case "perplexity":
+      return 'Search "%s" with Perplexity AI in Little Arc';
     default: // Google
       return 'Search "%s" with Google in Little Arc';
   }
