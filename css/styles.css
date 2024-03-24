@@ -1,0 +1,70 @@
+:root {
+  --background-color: #1c1c1c;
+  --text-color: #e4e4e4;
+  --header-bg-color: #111;
+  --border-color: #666; 
+  --focus-border-color: #009bff; 
+  --option-padding: 10px;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  --border-radius: 8px; 
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  padding: 10px;
+}
+
+.header .logo {
+  margin-right: 15px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+label {
+  font-size: 16px;
+  margin-top: 20px;
+  display: block;
+}
+
+select {
+  width: 100%;
+  padding: var(--option-padding);
+  margin-top: 5px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  background-color: var(--text-color);
+  font-size: 16px;
+  cursor: pointer;
+  color: var(--background-color);
+  box-shadow: var(--box-shadow);
+  transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+select:focus {
+  outline: none;
+  border-color: var(--focus-border-color);
+  box-shadow: 0 0 0 2px var(--focus-border-color);
+}
+
+option {
+  padding: var(--option-padding);
+  background-color: var(--header-bg-color);
+  color: var(--text-color);
+}
+
+*:focus {
+  transition: outline var(--transition-speed);
+}
