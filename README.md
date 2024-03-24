@@ -1,6 +1,6 @@
 <p align="left">
   <img src="/icons/icon128.png" alt="SnapSearch" style="vertical-align:middle" width="64">
-  <span style="font-size: large; font-size: 48px; vertical-align: middle;">&nbsp;SnapSearch- Better Search on Arc</span>
+  <h1 style="vertical-align: middle;">&nbsp;SnapSearch- Better Search on Arc</h1>
 </p>
 
 SnapSearch is a Arc Browser Extension that enhances the search functionality in the Arc Browser. It allows users to select text on a webpage and search for it using their preferred search engine in a "Little Arc" window.
