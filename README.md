@@ -55,7 +55,6 @@ SnapSearch requires the following permissions:
 
 - `contextMenus`: To add a context menu item that appears when the user selects text.
 - `storage`: To save the user's preferred search engine.
-- `tabs`: To open new tabs with the search query.
 
 
 ## Contributing
