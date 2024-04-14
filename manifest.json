@@ -1,5 +1,5 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 1.3,
   "name": "SnapSearch - Better Search on Arc",
   "description": "Search the web distraction-free with SnapSearch",
   "version": "1.3",
